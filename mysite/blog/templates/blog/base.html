@@ -5,14 +5,52 @@
   <title>{% block title %}{% endblock %}</title>
   <link href="{% static "css/blog.css" %}" rel="stylesheet">
 </head>
+
+<style>
+*{font-family: monospace;
+font-size: 20px;}
+	a, p, h1{color: black;}
+	h1{font-size: 30px;}
+	h2{font-size: 25px;}
+	#sidebar p{color: black;}
+	body{
+		 background-image: url({% static "img/swamp.jpg" %}); 
+		 background-size: 150%;
+		 background-repeat: no-repeat;
+	}
+	#content, #sidebar{
+		background-color: #e9ddba;
+		border-radius: 10px;
+	}
+	#content .date{
+		color: black;
+	}
+	.frog{
+		margin-left: 4%;
+		border-radius: 10px;
+		width: 370px;
+	}
+</style>
+
 <body>
   <div id="content">
     {% block content %}
     {% endblock %}
-  </div>
+  	<img class="frog" src="{% static "img/frog.jpg" %}">
+</div>
   <div id="sidebar">
-    <h2>My blog</h2>
-    <p>This is my blog.</p>
+    <h2>Sad Stories</h2>
+    <p>The Sad Stories About Crazy Animals</p>
+	<div class="zoo">
+		<ul>
+			<li><a href="#"> Animal 1 </a></li>
+			<li><a href="#"> Animal 2 </a></li>
+			<li><a href="#"> Animal 3 </a></li>
+			<li><a href="#"> Animal 4 </a></li>
+			<li><a href="#"> Animal 5 </a></li>
+			<li><a href="#"> Animal 6 </a></li>
+		</ul>
+	</div>
   </div>
 </body>
 </html>
